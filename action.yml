@@ -1,0 +1,19 @@
+name: 'datadotworld/upload-files'
+description: 'Uploads files to data.world'
+inputs:
+  token:
+    description: 'data.world API token'
+    required: true
+  agentdatasetid:
+    description: 'data.world dataset id'
+    required: true
+  file:
+    description: 'files to upload'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.agentdatasetid }}
+    - ${{ inputs.file }}
