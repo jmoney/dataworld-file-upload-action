@@ -8,7 +8,10 @@ inputs:
     description: 'data.world dataset id'
     required: true
   file:
-    description: 'files to upload'
+    description: 'file to upload'
+    required: true
+  filename:
+    description: 'filename to use'
     required: true
 runs:
   using: 'docker'
@@ -17,3 +20,4 @@ runs:
     - ${{ inputs.token }}
     - ${{ inputs.agentdatasetid }}
     - ${{ inputs.file }}
+    - ${{ inputs.filename }}
