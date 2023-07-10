@@ -1,6 +1,6 @@
-#!/bin/sh -x
+#!/bin/sh
 
 curl \
-  -H "Authorization: Bearer foo" \
-  -F "file=@${2}" \
-  https://api.data.world/v0/uploads/${3}/files
+  -H "Authorization: Bearer ${1}" \
+  -F "file=@${3}" \
+  https://api.data.world/v0/uploads/${2}/files
