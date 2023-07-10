@@ -1,5 +1,6 @@
 #!/bin/sh
 
+ls -la
 curl \
   -H "Authorization: Bearer ${1}" \
   -F "file=@${2}" \
